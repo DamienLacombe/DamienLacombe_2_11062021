@@ -1,4 +1,4 @@
-html, body{
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,3 +22,9 @@ button {
     border: none;
     background-color: transparent;
 }
+
+input {
+	border: none;
+	box-shadow: none;
+}
+
