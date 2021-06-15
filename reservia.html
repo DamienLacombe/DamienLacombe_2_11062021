@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -65,10 +65,16 @@
                     </li>
                 </ul>
             </div>
-            <p> <i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+            <div class="end-menu">
+                <div class="icone-container-i"><i class="fas fa-info"></i></div>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
         </div>
-        <section>
-            <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2>
+        <section class="populaire">
+            <div class="titre">
+                <h2>Les plus populaires </h2>
+                <div class="icone-container-h2"><i class="fas fa-chart-line"></i></div>
+            </div>
             <div class="card_container">
                 <div class="card">
                     <img src="./reservia/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
@@ -114,7 +120,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="hebergement">
             <h2>Hébergements à Marseille</h2>
             <div class="card_container">
                 <div class="card">
@@ -201,10 +207,11 @@
                         </div>
                     </div>  
                 </div>
+                <button>Afficher plus</button>
             </div>
-            <button>Afficher plus</button>
+            
         </section>
-        <section>
+        <section class="activites">
             <h2>Activités à Marseille</h2>
             <div class="card_container">
                 <div class="card">
@@ -234,22 +241,24 @@
             </div>
         </section>
         <footer>
-            <h3>A propos</h3>
-            <ul>
-                <li><a href="#">Fonctionnement du site</a></li>
-                <li><a href="#">Conditions générales de vente</a></li>
-                <li><a href="#">Données et confidentialité</a></li>
-            </ul>
-            <h3>Nos hébergements</h3>
-            <ul>
-                <li><a href="#">Charte qualité</a></li>
-                <li><a href="#">Soumettre votre Hôtel</a></li>
-            </ul>
-            <h3>Assistance</h3>
-            <ul>
-                <li><a href="#">Centre d'aide</a></li>
-                <li><a href="#">Nous contacter</a></li>
-            </ul>
+            <div class="footer-container">
+                <h3>A propos</h3>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+                <h3>Nos hébergements</h3>
+                <ul>
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Soumettre votre Hôtel</a></li>
+                </ul>
+                <h3>Assistance</h3>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
         </footer>
     </main>
     
