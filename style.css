@@ -4,25 +4,30 @@
 
 header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.header-container {
+.inscription {
     display: flex;
-    justify-content: space-around;
+    width: 30%;
+    border: none;
+    color: #0e6eff;
+    height: 75%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    
+}
+
+.logo-container {
+    width: 70%;
+    padding: 0px 20px 0px 4%;
+    display: flex;
     align-items: center;
-    height: 100px;
 }
 
-.header-container a {
-    display: flex;
-    justify-content: flex-end;
-    color: #0065fce3;
-    font-weight: 700;
-}
-
-header a {
+header nav a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,6 +41,8 @@ header a {
 nav {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 nav a {
@@ -57,7 +64,7 @@ nav a {
 h1 {
     font-size: 2.4rem;
     font-weight: 700;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 p {
@@ -208,7 +215,7 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 5% 15% 5%;
+    padding: 0 5% 6% 5%;
 }
 
 section.populaire {
@@ -230,6 +237,7 @@ section h2{
     position: relative;
     width: 30px;
 }
+
 .titre i {
     position: absolute;
     top: 50%;  
@@ -242,7 +250,6 @@ section.populaire .card_container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 3%;
 }
 
 .card {
@@ -251,6 +258,7 @@ section.populaire .card_container {
     height: 150px;
     background-color: white;
     border-radius: 20px;
+    margin-bottom: 4%;
 }
 
 .card img {
@@ -300,7 +308,6 @@ section.populaire .card_container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 1%;
 }
 
 .hebergement .card {
@@ -341,7 +348,7 @@ button {
     text-align: start;
     font-size: 1.8rem;
     font-weight: 700;
-    margin: 4% 0 8% 0;
+    margin: 4% 0 0 0;
 }
 
 .activites .card {
@@ -350,6 +357,7 @@ button {
     width: 100%;
     height: 200px;
     box-shadow: rgb(228, 228, 228) 0px 0px 12px;
+    margin-bottom: 6%;
 }
 
 .activites .card img {
@@ -360,27 +368,26 @@ button {
     border-bottom-left-radius: 0;
     margin: 0;
 }
+
 .activites .card h3{
     font-size: 1.6rem;
     font-weight: 800;
     text-align: start;
-    width: 90%;
-    padding-top: 6%;
+    width: 95%;
+    margin: 20px 0 0 10px;
 }
 
 .activites .card_container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 2%;
 }
 
 footer {
     display: flex;
     flex-direction: column; 
-    height: 500px;
+    height: 15%;
     background-color: #e4e1e181;
-    margin-top: 25%;
 }
 
 .footer-container {
@@ -401,9 +408,151 @@ footer ul {
 footer li {
     line-height: 3rem;
 }
+
 footer a {
     font-size: 1.6rem;
     font-weight: 500;
+}
+
+.rate .grey {
+    color: #c9c7c7;
+}
+
+@media  (min-width: 500px) {
+    
+    header {
+        margin-top: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        
+    }
+
+    .logo-container {
+        margin-top: 2%;
+    }
+    nav :nth-child(2) {
+        order:4;
+        font-size: 1.4rem;
+        height: 45px;
+    }
+
+    header nav a {
+        display: flex;
+        align-items: flex-end;
+        border: none;
+        font-size: 1.4rem;
+        min-width: 100px;
+        max-width: 150px;
+        text-align: center;
+    }
+
+    .actif {
+        border-bottom: none;
+        border-top: 2px solid #0065FC;
+    }
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    .search-bar {
+        margin: 35px 0% 35px 0%;
+        width: 80%;
+        max-width: 420px;
+    }
+
+    #menu ul {
+        margin: 3% 0 4% 0;
+    }
+    .end-menu {
+        margin-bottom: 20px;
+        justify-content: flex-start;
+    }
+
+    section h2 {
+        margin: 40px 0 30px 0;
+    }
+
+    section .card {
+        max-width: 500px;
+    }
+
+    section> * {
+        margin: auto;
+    }
+
+    section h2,section button {
+        text-align: center;
+    }
+
+    .titre h2 {
+        margin-right: 50px;
+    }
+
+    .titre .icone-container-h2 {
+        margin-top: 10px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 50px 5% 50px 5%;
+        width: 90%;
+    }
+
+    .footer-container div {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        width: 30%;
+    }
+}
+
+@media  (min-width: 790px) {
+
+    html {
+        font-size: 11px;
+    }
+
+    section> * {
+        margin: 0;
+    }
+
+    section.populaire .card_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+    
+    .hebergement .card_container,.activites .card_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+    
+    .hebergement button {
+        grid-column: span 2;
+    }
+    
+    section h2 {
+        text-align: left;
+    }
+    
+    .hebergement {
+        padding-bottom: 10px;
+    }
+}
+
+@media  (min-width: 790px) {
+    
 }
 
 
