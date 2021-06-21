@@ -1,7 +1,3 @@
-/* bleu #0065FC     version plus claire #DEEBFF     gris pour le fond #F2F2F2. */
-
-/* header */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -38,6 +34,11 @@ header nav a {
     font-weight: 600;
 }
 
+nav .actif:hover  {
+    color: #0065fcc2;
+    border-bottom: 4px solid #0065FC;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -47,11 +48,6 @@ nav {
 
 nav a {
     border-bottom: 3px solid #F2F2F2;
-}
-
-.actif {
-    color: #0065fcc2;
-    border-bottom: 4px solid #0065FC;
 }
 
 /* Menu */
@@ -82,6 +78,8 @@ p {
     border: 2px solid #F2F2F2;
     border-radius: 18px; 
     margin: 10% 0;
+    border-left: none;
+    border-right: none;
 }
 
 .icone-container {
@@ -154,6 +152,8 @@ input:focus::placeholder {
     border-right: #e4e1e1 2px solid;
     border-radius: 50px;
     margin: 1.5% 3% 1.5% 0;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 li .icone-container-filter {
@@ -162,8 +162,20 @@ li .icone-container-filter {
     min-width: 52px;
     height: 52px;
     background-color: #DEEBFF;
-    border-radius: 50px;
-    border: 2px solid #DEEBFF;
+    border-radius: 52px;
+    transition: 0.5s;
+}
+
+#menu li:hover .icone-container-filter{
+    background-color: #e4e1e1;
+}
+#menu li:hover .icone-container-filter i {
+    color:black;
+}
+
+#menu li:hover  {
+    background-color: #DEEBFF;
+    color: #0e6eff;
 }
 
 .icone-container-filter i {
@@ -173,6 +185,7 @@ li .icone-container-filter {
     transform: translate(-50%, -50%);
     font-size: 1.8rem;
     color: #0065FC;
+    transition: 1s;
 }
 
 .text {
@@ -184,6 +197,7 @@ li .icone-container-filter {
 .end-menu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10%;
 }
 
@@ -259,6 +273,12 @@ section.populaire .card_container {
     background-color: white;
     border-radius: 20px;
     margin-bottom: 4%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section .card:hover {
+    box-shadow: rgb(192, 192, 192) 0px 0px 12px;
 }
 
 .card img {
@@ -369,6 +389,11 @@ button {
     margin: 0;
 }
 
+.activites .card div {
+    height: 50px; 
+    width: 90%;
+}
+
 .activites .card h3{
     font-size: 1.6rem;
     font-weight: 800;
@@ -427,7 +452,7 @@ footer a {
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-wrap: nowrap;
         
     }
@@ -451,9 +476,10 @@ footer a {
         text-align: center;
     }
 
-    .actif {
-        border-bottom: none;
-        border-top: 2px solid #0065FC;
+    nav .actif:hover  {
+        color: #0065fcc2;
+        border-top: 3px solid #0065FC;
+        border-bottom: 0;
     }
 
     h1 {
@@ -463,7 +489,7 @@ footer a {
     .search-bar {
         margin: 35px 0% 35px 0%;
         width: 80%;
-        max-width: 420px;
+        max-width: 450px;
     }
 
     #menu ul {
@@ -500,7 +526,7 @@ footer a {
 
     .footer-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-start;
         margin: 50px 5% 50px 5%;
         width: 90%;
@@ -516,14 +542,23 @@ footer a {
 
 @media  (min-width: 790px) {
 
-    html {
-        font-size: 11px;
-    }
-
     section> * {
         margin: 0;
     }
 
+    nav {
+        margin: 0 0% 0 5%;
+    }
+
+    .logo-container {
+        padding-left: 0;
+    }
+
+    nav a {
+        display: flex;
+        justify-content: right ;
+    }
+    
     section.populaire .card_container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -531,7 +566,15 @@ footer a {
         grid-column-gap: 2rem;
     }
     
-    .hebergement .card_container,.activites .card_container {
+    .hebergement .card_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+    
+
+    .activites .card_container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -551,8 +594,228 @@ footer a {
     }
 }
 
-@media  (min-width: 790px) {
-    
+@media  (min-width: 1124px) {
+    #corps {
+        display: grid;
+        width: 90%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 25px;
+        margin: auto;
+    }
+
+    .populaire {
+        grid-column: 2;
+    }
+
+    section {
+        border-radius: 30px;
+    }
+
+    section.populaire .card_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 50px;
+    }
+
+    .populaire .card_container .card {
+        max-width: 340px;
+        margin: auto;
+    }
+
+    .search-bar,.search-bar>div{
+        height: 60px;
+    }
+
+    .search-bar i {
+        font-size: 2.2rem;
+    }
+
+    .search-bar :nth-child(3) i {
+        display: none;
+    }
+
+    .search-bar :nth-child(3)::after{
+        position: absolute;
+        content: "Rechercher";
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 600;
+        top: 50%;  
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+
+    .filter {
+        display: flex;
+        align-items: center;
+    }
+
+    .filter h2 {
+        margin-right: 40px;
+    }
+
+    #menu ul {
+        margin: 0;
+    }
+
+    .search-bar :nth-child(3) {
+        width: 28%;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .search-bar {
+        margin-bottom: 25px;
+    }
+
+    section.populaire h2 {
+        margin-right: 0;
+    }
+
+    section.populaire .card {
+        height: 175px;
+    }
+
+    section.populaire .card img {
+        height: 165px;
+    }
+
+    .populaire .card_container:nth-child(2) h3 {
+        height: auto;
+    }
+
+    .hebergement {
+        grid-column: 1;
+        grid-row: 1;
+        background-color: #e4e1e1;
+    }
+
+    .hebergement button {
+        grid-column: 1;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .activites {
+        width: 90%;
+        padding: 0;
+        margin: auto;
+        height: 100%;
+    }
+
+    .activites .card_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .activites .card_container{
+        width: 100%;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        grid-column-gap: 0px;
+    }
+    .activites .card_container .card {
+        width: 30%;
+        margin-bottom: 30px;
+    }
+
+    .activites .card div {
+        height: 50px; 
+        width: 90%;
+    }
+
+    .activites .card h3 {
+        height: 50px;
+        margin: 0;
+        padding-top: 10px;
+        width: 100%;
+    }
+    .activites .card img {
+        height: 150px;
+    }
+
+    @media  (min-width: 1350px) {
+        html {
+            font-size: 10px;
+        }
+
+        .titre {
+            width: 90%;
+            margin: auto;
+        }
+
+        #corps {
+            grid-template-columns: 70% 30%;
+        }
+
+        .hebergement .card_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 2.5rem;
+        }
+
+        .hebergement .card {
+            max-height: 190px;
+        }
+
+        button {
+            margin: 0 0 30px 0;
+        }
+
+        section.populaire .card_container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 10px;
+        }
+
+        section.populaire .card_container .card {
+            height: 150px;
+        }
+
+        section.populaire .card_container .card img {
+            height: 140px;
+        }
+        .activites .card_container {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            justify-content: space-around;
+            max-height: 460px;
+        }
+
+        .activites .card_container .card {
+            height: 192.5px;
+            margin: 0;
+            width: 23%; 
+        }
+
+        .activites .card_container .card img{
+            height: 142.5px;
+        }
+
+        .activites .card.big {
+            height: 450px;
+        }
+
+        .activites .card.big img {
+            height: 400px;
+        }
+
+        .activites .card.normal {
+            height: 217.5px;
+        }
+        .activites .card.normal img {
+            height: 167.5px;
+        }
+        .activites .card_container .card:nth-child(2), .activites .card_container .card:nth-child(5) {
+            margin-bottom: 40px;
+        }
+    }
 }
 
 
