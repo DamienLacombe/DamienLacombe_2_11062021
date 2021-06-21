@@ -748,7 +748,7 @@ footer a {
         }
 
         #corps {
-            grid-template-columns: 70% 30%;
+            grid-template-columns: 75% 25%;
         }
 
         .hebergement .card_container {
@@ -760,7 +760,7 @@ footer a {
         }
 
         .hebergement .card {
-            max-height: 190px;
+            max-height: 200px;
         }
 
         button {
@@ -770,7 +770,7 @@ footer a {
         section.populaire .card_container {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            grid-row-gap: 10px;
+            grid-row-gap: 30px;
         }
 
         section.populaire .card_container .card {
@@ -791,7 +791,7 @@ footer a {
         .activites .card_container .card {
             height: 192.5px;
             margin: 0;
-            width: 23%; 
+            width: 22%; 
         }
 
         .activites .card_container .card img{
