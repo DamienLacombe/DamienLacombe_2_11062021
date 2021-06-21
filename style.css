@@ -619,7 +619,7 @@ footer a {
     }
 
     .populaire .card_container .card {
-        max-width: 340px;
+        max-width: 420px;
         margin: auto;
     }
 
@@ -660,7 +660,7 @@ footer a {
     }
 
     .search-bar :nth-child(3) {
-        width: 28%;
+        width: 35%;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
     }
@@ -737,9 +737,9 @@ footer a {
         height: 150px;
     }
 
-    @media  (min-width: 1350px) {
+    @media  (min-width: 1800px) {
         html {
-            font-size: 10px;
+            font-size: 12px;
         }
 
         .titre {
@@ -748,19 +748,19 @@ footer a {
         }
 
         #corps {
-            grid-template-columns: 75% 25%;
+            grid-template-columns: 70% 28.5%;
         }
 
         .hebergement .card_container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            grid-column-gap: 2rem;
+            grid-column-gap: 4rem;
             grid-row-gap: 2.5rem;
         }
 
         .hebergement .card {
-            max-height: 200px;
+            height: 250px;
         }
 
         button {
@@ -774,43 +774,44 @@ footer a {
         }
 
         section.populaire .card_container .card {
-            height: 150px;
+            height: 180px;
+            width: 90% ;
         }
 
         section.populaire .card_container .card img {
-            height: 140px;
+            height: 170px;
         }
         .activites .card_container {
             display: flex;
             flex-direction: column;
             align-content: space-between;
             justify-content: space-around;
-            max-height: 460px;
+            max-height: 550px;
         }
 
         .activites .card_container .card {
-            height: 192.5px;
+            height: 242.5px;
             margin: 0;
             width: 22%; 
         }
 
         .activites .card_container .card img{
-            height: 142.5px;
+            height: 192.5px;
         }
 
         .activites .card.big {
-            height: 450px;
+            height: 550px;
         }
 
         .activites .card.big img {
-            height: 400px;
+            height: 500px;
         }
 
         .activites .card.normal {
-            height: 217.5px;
+            height: 267.5px;
         }
         .activites .card.normal img {
-            height: 167.5px;
+            height: 217.5px;
         }
         .activites .card_container .card:nth-child(2), .activites .card_container .card:nth-child(5) {
             margin-bottom: 40px;
