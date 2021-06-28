@@ -233,7 +233,7 @@ section {
 }
 
 section.populaire {
-    background-color: #e4e1e1
+    background-color: #f0f0f0;
 }
 
 .titre {
@@ -275,6 +275,12 @@ section.populaire .card_container {
     margin-bottom: 4%;
     cursor: pointer;
     transition: 0.3s;
+}
+
+span {
+    font-weight: 700;
+    font-size: inherit;
+    margin-left: 5px;
 }
 
 section .card:hover {
@@ -547,11 +553,7 @@ footer a {
     }
 
     nav {
-        margin: 0 0% 0 5%;
-    }
-
-    .logo-container {
-        padding-left: 0;
+        margin: 0 0% 0 0%;
     }
 
     nav a {
@@ -595,6 +597,17 @@ footer a {
 }
 
 @media  (min-width: 1124px) {
+    header {
+        width: 92%;
+        margin-left: 5%;
+    }
+
+    header nav a,header nav .inscription {
+        height: 60px;
+    }
+    .logo-container {
+        padding: 0;
+    }
     #corps {
         display: grid;
         width: 90%;
@@ -689,7 +702,7 @@ footer a {
     .hebergement {
         grid-column: 1;
         grid-row: 1;
-        background-color: #e4e1e1;
+        background-color: #f0f0f0;
     }
 
     .hebergement button {
